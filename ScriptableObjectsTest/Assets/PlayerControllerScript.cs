@@ -5,12 +5,8 @@ using UnityEngine;
 public class PlayerControllerScript : MonoBehaviour {
 
     public float jumpHeight;
-    public LayerMask layerMask;
 
     Rigidbody2D rb;
-
-    RaycastHit2D hit;
-    Ray2D ray;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();

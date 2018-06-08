@@ -41,14 +41,14 @@ public class TurnManager : MonoBehaviour {
 
     public void NextTurn () {
         switch (turn) {
-            case Turn.Enemy:
-                turn = Turn.Player;
-                break;
             case Turn.Player:
+                turn = Turn.Enemy;
+                break;
+            case Turn.Enemy:
                 turn = Turn.Result;
                 break;
             case Turn.Result:
-                turn = Turn.Enemy;
+                turn = Turn.Player;
                 break;
         }
     }

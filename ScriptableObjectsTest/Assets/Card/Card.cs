@@ -4,7 +4,6 @@
 public class Card : ScriptableObject {
 
     public Effect effect;
-    public GameObject player;
     public Animator playerAnim;
 
     public void DoEffect() {

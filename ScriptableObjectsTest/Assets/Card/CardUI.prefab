@@ -70,7 +70,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252929260820138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.4, y: -3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -271,9 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 11400000, guid: 15bda2a609247074493ed4c89e117134, type: 2}
+  maxSize: {x: 1.5, y: 1.5, z: 1.5}
+  minSize: {x: 1, y: 1, z: 1}
+  timeToTransform: 5
   cardNameText: {fileID: 114182117325452984}
-  player: {fileID: 0}
-  playerAnim: {fileID: 0}
 --- !u!212 &212540348657133466
 SpriteRenderer:
   m_ObjectHideFlags: 1
