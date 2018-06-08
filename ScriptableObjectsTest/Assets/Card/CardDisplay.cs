@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class CardDisplay : MonoBehaviour {
@@ -9,8 +7,8 @@ public class CardDisplay : MonoBehaviour {
 
     public TMP_Text cardNameText;
 
-    public GameObject player;
-    public Animator playerAnim;
+    GameObject player;
+    Animator playerAnim;
 
     void Start() {
         cardNameText.text = card.effect.ToString();
