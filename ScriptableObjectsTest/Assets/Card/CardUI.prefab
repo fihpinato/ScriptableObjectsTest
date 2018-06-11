@@ -274,6 +274,9 @@ MonoBehaviour:
   maxSize: {x: 1.5, y: 1.5, z: 1.5}
   minSize: {x: 1, y: 1, z: 1}
   timeToTransform: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   cardNameText: {fileID: 114182117325452984}
 --- !u!212 &212540348657133466
 SpriteRenderer:

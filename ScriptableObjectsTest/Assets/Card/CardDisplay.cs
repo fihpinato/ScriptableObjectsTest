@@ -9,15 +9,22 @@ public class CardDisplay : MonoBehaviour {
     public Vector3 minSize;
     public float timeToTransform;
 
+    public LayerMask layerMask;
+
     public TMP_Text cardNameText;
+
+    Vector3 firstPos;
 
     GameObject player;
     Animator playerAnim;
     bool mouseUp = false;
 
+    RaycastHit2D hit;
+
     void Start() {
         cardNameText.text = card.effect.ToString();
 
+        firstPos = transform.position;
         //player = GameObject.FindGameObjectWithTag("Player");
         //playerAnim = player.GetComponent<Animator>();
         //card.playerAnim = playerAnim;
@@ -25,8 +32,6 @@ public class CardDisplay : MonoBehaviour {
 
     private void Update() {
         TransformCardSize();
-
-        
     }
 
     void TransformCardSize () {
@@ -58,7 +63,13 @@ public class CardDisplay : MonoBehaviour {
     }
 
     private void OnMouseUp() {
-        
+        if(Physics2D.Raycast(transform.position, transform.forward, layerMask)) {
+            print("test");
+            
+            mouseUp = false;
+        } else {
+            transform.position = firstPos;
+        }
     }
 
     private void OnMouseEnter() {
