@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29f92bb9140d9248b18768fe3df052f, type: 3}
+  m_Name: standMK
+  m_EditorClassIdentifier: 
+  name: standMK
+  jokenpo: 1
+  delay: 8
+  delayOnHit: 2
+  delayOnBlock: -2
+  damage: 2

@@ -6,7 +6,6 @@ public class EnemyControllerScript : MonoBehaviour {
 
     public float jumpHeight;
     public LayerMask layerMask;
-    public Effect effect;
 
     Rigidbody2D rb;
 

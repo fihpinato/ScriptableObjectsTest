@@ -1,19 +1,17 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Card", menuName = "Card")]
+[CreateAssetMenu(fileName = "New Card", menuName = "ScriptableObject/Card")]
 public class Card : ScriptableObject {
-
-    public Effect effect;
-    public Animator playerAnim;
-
-    public void DoEffect() {
-        playerAnim.SetTrigger(effect.ToString());
-    }
+    public new string name;
+    public Jokenpo jokenpo;
+    public int delay = 1;
+    public int delayOnHit;
+    public int delayOnBlock;
+    public int damage;
 }
 
-public enum Effect {
-    Defense,
-    Attack,
-    Grab,
-    Jump
+public enum Jokenpo {
+    Rock,
+    Papper,
+    Scissors
 }
