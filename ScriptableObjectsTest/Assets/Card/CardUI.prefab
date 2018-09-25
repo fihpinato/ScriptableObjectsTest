@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 212928076134785010}
   - component: {fileID: 114961412802309324}
   - component: {fileID: 65038622697838146}
+  - component: {fileID: 114176156597071990}
+  - component: {fileID: 114195318904796526}
   m_Layer: 0
   m_Name: CardUI
   m_TagString: Finish
@@ -456,6 +458,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0.4}
+--- !u!114 &114176156597071990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1252929260820138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 50
+    i1: 86
+    i2: 153
+    i3: 30
+    i4: 34
+    i5: 168
+    i6: 242
+    i7: 84
+    i8: 218
+    i9: 31
+    i10: 66
+    i11: 234
+    i12: 46
+    i13: 64
+    i14: 221
+    i15: 9
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114182117325452984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -569,6 +603,27 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
+--- !u!114 &114195318904796526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1252929260820138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!114 &114446899454453788
 MonoBehaviour:
   m_ObjectHideFlags: 1

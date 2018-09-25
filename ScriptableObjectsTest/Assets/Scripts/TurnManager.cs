@@ -28,8 +28,6 @@ public class TurnManager : MonoBehaviour {
             _instance = this;
         }
         DontDestroyOnLoad(gameObject);
-
-        objectPooler = ObjectPooler.Instance;
     }
     #endregion
 
@@ -77,18 +75,13 @@ public class TurnManager : MonoBehaviour {
         }
 
         public void DrawCard(Vector3 newPos, string poolName) {
-            GameObject card = ObjectPooler.Instance.SpawnFromPool(poolName, spawnPoint.position + newPos, Quaternion.identity);
-            CardDisplay cardScript = card.GetComponent<CardDisplay>();
-            cardScript.card = deck[Random.Range(0, deck.Count)];
-            activeCards.Add(cardScript.transform);
+			
         }
     }
 
     public List<Player> players;
 
     public int cardToSpawnOnStart = 5;
-
-    ObjectPooler objectPooler;
 
     private void Start() {
         players[0].InitStats();

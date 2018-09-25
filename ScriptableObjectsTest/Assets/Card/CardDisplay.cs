@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using TMPro;
 
-public class CardDisplay : MonoBehaviour, IPooledObject {
+public class CardDisplay : NetworkBehaviour {
 
     public Card card;
 
@@ -28,18 +29,16 @@ public class CardDisplay : MonoBehaviour, IPooledObject {
     Ray ray;
 
     void Start() {
-        jokenpoText.text = card.jokenpo.ToString();
-        nameText.text = card.name;
-        delayText.text = card.delay.ToString();
-        delayOnHitText.text = card.delayOnHit.ToString();
-        delayOnBlockText.text = card.delayOnBlock.ToString();
-        damageText.text = card.damage.ToString();
-        firstPos = transform.position;
-        cam = Camera.main;
-    }
-
-    public void OnObjectSpawn() {
-        Start();
+		if(isServer){
+	        jokenpoText.text = card.jokenpo.ToString();
+	        nameText.text = card.name;
+	        delayText.text = card.delay.ToString();
+	        delayOnHitText.text = card.delayOnHit.ToString();
+	        delayOnBlockText.text = card.delayOnBlock.ToString();
+	        damageText.text = card.damage.ToString();
+	        firstPos = transform.position;
+	        cam = Camera.main;
+		}
     }
 
     private void Update() {
@@ -68,7 +67,6 @@ public class CardDisplay : MonoBehaviour, IPooledObject {
     }
 
     private void OnMouseUp() {
-        
         if (Physics.Raycast(transform.position, transform.forward * 10f, out hit)) {
             if (hit.collider.CompareTag("Respawn")) {
                 mouseUp = false;
@@ -79,7 +77,7 @@ public class CardDisplay : MonoBehaviour, IPooledObject {
             }
         } else {
             //TurnManager.Instance.AddCardInList(transform);
-            transform.position = firstPos;
+            //transform.position = firstPos;
         }
     }
 
